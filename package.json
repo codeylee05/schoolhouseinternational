@@ -1,0 +1,15 @@
+{
+  "name": "schoolhouseinternational",
+  "version": "1.0.0",
+  "description": "Website for School House International ",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/codeylee05/schoolhouseinternational"
+  },
+  "author": "Lefa Mofokeng",
+  "license": "ISC"
+}
