@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333333;
+    background: #faf9f6;
+    font-size: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: #333333;
+    background: inherit;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    height: 70px;
+}
+
+.navbar:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); 
+
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a:hover {
+    color: #78007c;
+}
+
+.nav-links a {
+    color: #333333;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.cta-desktop {
+    padding: 10px 20px;
+    background-color: #78007c;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.cta-mobile {
+    display: none;
+    padding: 10px 20px;
+    background-color: #78007c;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.cta-mobile:hover ,
+.cta-desktop:hover {
+    background-color: inherit;
+    color: #78007c;
+    border: solid 1px #78007c;
+}
+
+section {
+    min-height: 100vh;
+    width: 100%;
+    margin-top: 70px;
+    z-index: -1;
+}
+
+#landing-section {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('image.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+/*Media queries */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .cta-desktop {
+        display: none;
+    }
+
+    .cta-mobile {
+        display: inline-block;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        top: 50px;
+    }
+
+    .cta-mobile {
+        display: inline-block;
+        margin-top: 20px;
+    }
+}
