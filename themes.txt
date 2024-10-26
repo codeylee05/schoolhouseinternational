@@ -1,0 +1,10 @@
+THEME COLOURS:
+
+* Theme colour 1 (Purple theme colour): #78007C
+* Text standard colour: #333333
+* Background standard colour: #faf9f6
+* Theme colour 2: #5b5299
+* Theme colour 3: #041f60
+* Theme colour 4: #A6B6F8
+* Theme colour 5: #3BE2FF
+* Theme colour 6: #041F60

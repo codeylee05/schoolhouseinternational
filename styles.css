@@ -37,6 +37,11 @@ body {
     align-items: center;
 }
 
+.logo-container a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .logo-image {
     width: 40px;
     height: 40px;
@@ -105,10 +110,87 @@ section {
 }
 
 #landing-section {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('image.png');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('assets/images/landing_bg.png');
     background-size: cover; 
     background-position: center; 
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
+    position: relative 
+}
+
+.landing-header-1 {
+    position: absolute;
+    top: 50px;
+    left: 60px;
+    color: white;
+}
+
+.landing-header-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.landing-header-1 h1 {
+    font-size: 2.8rem;
+}
+
+.landing-header-1 img {
+    width: 200px;
+    height: 200px;
+}
+
+.landing-header-2 {
+    position: absolute;
+    top: 300px;
+    left: 60px;
+    text-align: left;
+    color: #041f60;
+}
+
+.landing-contact {
+    position: absolute;
+    top: 273px;
+    right: 60px;
+    width: 370px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #faf9f6;
+    background: rgba(34, 33, 33, 0.69);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.1px);
+    -webkit-backdrop-filter: blur(6.1px);
+    /*border: 1px solid rgba(34, 33, 33, 0.69);*/
+}
+
+
+.landing-contact img {
+    width: 40px;
+    height: 40px;
+    transform: translateY(12px);
+    margin-left: 20px;
+}
+
+.landing-contact .contact-btn {
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #041f60;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 165px;
+    height: 45px;
+    font-size: 1.2rem;
+}
+
+.landing-contact .contact-btn:hover {
+    background-color: #faf9f6;
+    color: #041f60;
+    border: solid 1px #041f60;
 }
 
 /*Media queries */
