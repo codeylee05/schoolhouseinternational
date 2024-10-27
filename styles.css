@@ -146,7 +146,19 @@ section {
     text-align: left;
     color: #041f60;
 }
-
+.campus-container {
+    display: flex;
+    flex-direction: column;
+    text-align: flex-start;
+    gap:8px;
+}
+.campus-container a{
+    text-decoration: none;
+    padding: 8px;
+    color: #041f60;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+}
 .landing-contact {
     position: absolute;
     top: 273px;
