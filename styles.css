@@ -272,6 +272,71 @@ section {
     transform: translateY(-10px);
 }
 
+/* About section */
+#about-section {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('assets/images/about-banner.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    /*position: relative;*/
+    /*background-attachment: fixed;*/
+    transform: translateY(-160px);
+}
+
+.about-header {
+    font-size: 3.5rem;
+    color: #78007c;
+    font-weight: bold;
+    text-align: center;
+}
+
+.about-cards-cont {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.about-card {
+    flex: 1 1 calc(50% - 20px); 
+    background: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #333;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-card img {
+    height: 65;
+    width: 65px;
+}
+
+.about-card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #041f60;
+}
+
+.about-card p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.about-text {
+    text-align: center;
+    color: white;
+    font-size: 1.4rem;
+    color: #333333;
+}
+
 /*Media queries */
 /*Larger phones  Navbar only*/
 @media (max-width: 768px)  {
@@ -320,16 +385,16 @@ section {
     }
 
     .sub-nav-links {
-        position: static; /* Remove absolute positioning */
-        width: 100%; /* Full-width for small screens */
+        position: static; 
+        width: 100%;
         padding: 0;
-        box-shadow: none; /* Remove shadow for mobile simplicity */
-        transform: none; /* No transform for simplicity */
-        opacity: 1; /* Fully visible */
-        display: none; /* Visible on active */
+        box-shadow: none; 
+        transform: none; 
+        opacity: 1; 
+        display: none; 
     }
     .sub-nav-links li {
-        padding: 5px; /* Adjust padding */
+        padding: 5px; 
     }
 
     .landing-header-1 {
@@ -438,16 +503,16 @@ section {
     }
 
     .sub-nav-links {
-        position: static; /* Remove absolute positioning */
-        width: 100%; /* Full-width layout */
+        position: static; 
+        width: 100%;
         padding: 0;
-        box-shadow: none; /* Simplify styling */
+        box-shadow: none; 
         opacity: 1;
-        display: none; /* Show on active */
-        margin-top: 10px; /* Add space for visibility */
+        display: none;
+        margin-top: 10px; 
     }
     .sub-nav-links li {
-        padding: 5px; /* Adjust padding for tablets */
+        padding: 5px;
     }
 
     .menu-toggle {
