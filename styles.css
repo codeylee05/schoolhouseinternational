@@ -153,6 +153,7 @@ section {
     background-repeat: no-repeat;
     position: relative;
     background-attachment: fixed;
+    position: relative;
 }
 
 .landing-header-1 {
@@ -179,7 +180,7 @@ section {
 
 .landing-header-2 {
     position: absolute;
-    top: 330px;
+    top: 310px;
     left: 60px;
     text-align: left;
     color: #041f60;
@@ -187,7 +188,7 @@ section {
 }
 .landing-contact {
     position: absolute;
-    top: 303px;
+    top: 283px;
     right: 60px;
     width: 370px;
     height: 200px;
@@ -232,16 +233,14 @@ section {
 }
 
 .landing-bottom {
-    height: 100px;
+    height: 80px;
     background: white;
     width: 100%;
-    position: absolute;
-    top: 746px;
-    left: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    transform: translateY(500px);
 }
 
 .landing-bottom .right {
@@ -280,7 +279,6 @@ section {
     background-repeat: no-repeat;
     /*position: relative;*/
     /*background-attachment: fixed;*/
-    transform: translateY(-160px);
 }
 
 .about-header {
@@ -297,7 +295,7 @@ section {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .about-card {
@@ -335,6 +333,12 @@ section {
     color: white;
     font-size: 1.4rem;
     color: #333333;
+}
+
+/* Campuses section */
+.campuses-header {
+    font-size: 2.9rem;
+    text-align: center;
 }
 
 /*Media queries */
@@ -375,11 +379,7 @@ section {
 }
 
 /*Iphone mini and similiar smaller phones */
-@media (min-width: 375px) and (max-width: 375px) {
-    .landing-contact {
-        top: 290px;
-    }
-}
+
 
 /*Larger phones */
 @media (max-width: 767px) {
