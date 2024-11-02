@@ -102,6 +102,43 @@ body {
     border: solid 1px #78007c;
 }
 
+.sub-nav-links {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Positioned below "Campuses" */
+    left: 400px;
+    list-style: none;
+    background-color: #faf9f6;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    width: 250px;
+    z-index: 100;
+    opacity: 0; /* Start transparent */
+    transform: translateY(-10px); /* Start slightly up for animation */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+}
+
+.sub-nav-links li {
+    padding: 10px 20px;
+}
+
+.sub-nav-links a {
+    color: #041f60;
+    text-decoration: none;
+}
+
+.sub-nav-links a:hover {
+    color: #78007c;
+}
+
+.campuses-link.active .sub-nav-links {
+    display: block; /* Show when active */
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Slide down */
+}
+
 section {
     min-height: 100vh;
     width: 100%;
@@ -281,6 +318,20 @@ section {
         display: inline-block;
         margin-top: 20px;
     }
+
+    .sub-nav-links {
+        position: static; /* Remove absolute positioning */
+        width: 100%; /* Full-width for small screens */
+        padding: 0;
+        box-shadow: none; /* Remove shadow for mobile simplicity */
+        transform: none; /* No transform for simplicity */
+        opacity: 1; /* Fully visible */
+        display: none; /* Visible on active */
+    }
+    .sub-nav-links li {
+        padding: 5px; /* Adjust padding */
+    }
+
     .landing-header-1 {
         position: relative;
         top: 0;
@@ -384,6 +435,19 @@ section {
 
     .nav-links li {
         margin: 10px 0;
+    }
+
+    .sub-nav-links {
+        position: static; /* Remove absolute positioning */
+        width: 100%; /* Full-width layout */
+        padding: 0;
+        box-shadow: none; /* Simplify styling */
+        opacity: 1;
+        display: none; /* Show on active */
+        margin-top: 10px; /* Add space for visibility */
+    }
+    .sub-nav-links li {
+        padding: 5px; /* Adjust padding for tablets */
     }
 
     .menu-toggle {
