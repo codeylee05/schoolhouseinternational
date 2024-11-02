@@ -102,6 +102,43 @@ body {
     border: solid 1px #78007c;
 }
 
+.sub-nav-links {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Positioned below "Campuses" */
+    left: 400px;
+    list-style: none;
+    background-color: #faf9f6;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    width: 250px;
+    z-index: 100;
+    opacity: 0; /* Start transparent */
+    transform: translateY(-10px); /* Start slightly up for animation */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+}
+
+.sub-nav-links li {
+    padding: 10px 20px;
+}
+
+.sub-nav-links a {
+    color: #041f60;
+    text-decoration: none;
+}
+
+.sub-nav-links a:hover {
+    color: #78007c;
+}
+
+.campuses-link.active .sub-nav-links {
+    display: block; /* Show when active */
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Slide down */
+}
+
 section {
     min-height: 100vh;
     width: 100%;
@@ -146,8 +183,8 @@ section {
     left: 60px;
     text-align: left;
     color: #041f60;
-}
 
+}
 .landing-contact {
     position: absolute;
     top: 303px;
@@ -235,6 +272,71 @@ section {
     transform: translateY(-10px);
 }
 
+/* About section */
+#about-section {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('assets/images/about-banner.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    /*position: relative;*/
+    /*background-attachment: fixed;*/
+    transform: translateY(-160px);
+}
+
+.about-header {
+    font-size: 3.5rem;
+    color: #78007c;
+    font-weight: bold;
+    text-align: center;
+}
+
+.about-cards-cont {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.about-card {
+    flex: 1 1 calc(50% - 20px); 
+    background: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #333;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-card img {
+    height: 65px;
+    width: 65px;
+}
+
+.about-card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #041f60;
+}
+
+.about-card p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.about-text {
+    text-align: center;
+    color: white;
+    font-size: 1.4rem;
+    color: #333333;
+}
+
 /*Media queries */
 /*Larger phones  Navbar only*/
 @media (max-width: 768px)  {
@@ -269,6 +371,14 @@ section {
     .cta-mobile {
         display: inline-block;
     }
+    
+}
+
+/*Iphone mini and similiar smaller phones */
+@media (min-width: 375px) and (max-width: 375px) {
+    .landing-contact {
+        top: 290px;
+    }
 }
 
 /*Larger phones */
@@ -281,6 +391,20 @@ section {
         display: inline-block;
         margin-top: 20px;
     }
+
+    .sub-nav-links {
+        position: static; 
+        width: 100%;
+        padding: 0;
+        box-shadow: none; 
+        transform: none; 
+        opacity: 1; 
+        display: none; 
+    }
+    .sub-nav-links li {
+        padding: 5px; 
+    }
+
     .landing-header-1 {
         position: relative;
         top: 0;
@@ -362,6 +486,33 @@ section {
         padding-top: 0; 
         transform: translateY(-50px);
     }
+
+    #about-section {
+        transform: translateY(45px);
+    }
+
+    .about-header {
+        font-size: 2.3rem;
+    }
+
+    .about-cards-cont {
+        margin-top: 10px;
+    }
+
+    .about-card {
+        flex: 1 1 100%; 
+        padding: 15px;
+        height: 150px;
+    }
+
+    .about-card h2 {
+        font-size: 1.4rem;
+    }
+
+    .about-card p {
+        display: none; 
+    }
+
 }
 
 /*tablets and larger screens under laptop */
@@ -384,6 +535,19 @@ section {
 
     .nav-links li {
         margin: 10px 0;
+    }
+
+    .sub-nav-links {
+        position: static; 
+        width: 100%;
+        padding: 0;
+        box-shadow: none; 
+        opacity: 1;
+        display: none;
+        margin-top: 10px; 
+    }
+    .sub-nav-links li {
+        padding: 5px;
     }
 
     .menu-toggle {
@@ -493,6 +657,29 @@ section {
     .landing-bottom .left .img-2 {
         width: 40%; 
         height: auto;
+    }
+
+    #about-section {
+        transform: translateY(80px);
+    }
+
+    .about-header {
+        font-size: 2.9rem;
+        transform: translateY(20px);
+    }
+
+    .about-card {
+        flex: 1 1 100%; 
+        padding: 15px;
+        height: 260px;
+    }
+
+    .about-card h2 {
+        font-size: 2rem;
+    }
+
+    .about-card p {
+        font-size: 1.3rem;
     }
 }
 
