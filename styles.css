@@ -213,7 +213,8 @@ section {
     margin-left: 20px;
 }
 
-.landing-contact .contact-btn {
+.landing-contact .contact-btn,
+.learn-more-btn {
     margin-top: 30px;
     padding: 10px 20px;
     background-color: #041f60;
@@ -226,7 +227,8 @@ section {
     font-size: 1.2rem;
 }
 
-.landing-contact .contact-btn:hover {
+.landing-contact .contact-btn:hover,
+.learn-more-btn:hover {
     background-color: #faf9f6;
     color: #041f60;
     border: solid 1px #041f60;
@@ -339,7 +341,44 @@ section {
 .campuses-header {
     font-size: 2.9rem;
     text-align: center;
+    color: #041f60
 }
+
+.campus-cards-cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.campus-card {
+    background: rgba(4, 31, 96, 0.04);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.9px);
+    -webkit-backdrop-filter: blur(3.9px);
+    border: 1px solid rgba(4, 31, 96, 0.13);
+    padding: 10px;
+    text-align: center;
+    color: #333;
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 370px;
+    position: relative;
+}
+
+.campus-card h2 {
+    color: #A6B6F8;
+}
+
+.campus-card a {
+   position: absolute;
+   bottom: 20px;
+   text-decoration: none;
+}
+
 
 /*Media queries */
 /*Larger phones  Navbar only*/
@@ -513,6 +552,37 @@ section {
         display: none; 
     }
 
+    .campus-cards-cont {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .campus-card {
+        width: 90%; /* Full width with padding */
+        height: 365px; /* Reduced height for mobile */
+        padding: 10px;
+        background: #A6B6F8;
+        color: black;
+    }
+
+    .campus-card h2 {
+        color: #041f60;
+    }
+
+    .campuses-header {
+        font-size: 2.2rem; /* Smaller header font size */
+    } 
+    
+    .campus-card a button {
+        background: #78007c
+    }
+
+    .campus-card a button:hover {
+        border: solid 1px #78007c;
+        color: #78007c;
+    }
+
 }
 
 /*tablets and larger screens under laptop */
@@ -680,6 +750,38 @@ section {
 
     .about-card p {
         font-size: 1.3rem;
+    }
+
+    .campus-cards-cont {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .campus-card {
+        width: 63%; /* Full width with padding */
+        height: 340px; /* Reduced height for mobile */
+        padding: 10px;
+        background: #A6B6F8;
+        color: black;
+    }
+
+    .campus-card h2 {
+        color: #041f60;
+    }
+
+    .campuses-header {
+        font-size: 2.5rem;
+        margin-top: 40px;
+    } 
+    
+    .campus-card a button {
+        background: #78007c
+    }
+
+    .campus-card a button:hover {
+        border: solid 1px #78007c;
+        color: #78007c;
     }
 }
 
