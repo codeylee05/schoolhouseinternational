@@ -19,30 +19,4 @@ window.addEventListener('scroll', function () {
 });
 
 
-/*Testimonials carousel */
-const testimonials = document.querySelectorAll('.testimonial');
-let currentIndex = 0;
-
-document.getElementById('next').addEventListener('click', () => {
-    testimonials[currentIndex].classList.remove('active');
-    currentIndex = (currentIndex + 1) % testimonials.length;
-    testimonials[currentIndex].classList.add('active');
-    updateCarousel();
-});
-
-document.getElementById('prev').addEventListener('click', () => {
-    testimonials[currentIndex].classList.remove('active');
-    currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
-    testimonials[currentIndex].classList.add('active');
-    updateCarousel();
-});
-
-function updateCarousel() {
-    const offset = -currentIndex * (100 / testimonials.length);
-    document.querySelector('.carousel').style.transform = `translateX(${offset}%)`;
-}
-
-// Initialize first testimonial as active
-testimonials[currentIndex].classList.add('active');
-
 
