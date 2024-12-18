@@ -1,8 +1,115 @@
 #landing-section-high {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('assets/images/HIGH SCHOOL.jpg');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('assets/images/High.jpg');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
     position: relative;
     background-attachment: fixed;
+}
+.campus-information-container {
+display:flex;
+text-align:center;
+width:auto;
+}
+.landing-header-high-1{
+
+   
+ 
+    color: white;
+
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.subject-section-high{
+    top:50px;
+}
+.logo-image {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.landing-header-high-1 h1 {
+    font-size: 5rem;
+    text-decoration: none;
+}
+.landing-header-high-1 img {
+    width: 200px;
+    height: 200px;
+}
+
+#about-section-high {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('assets/images/about-banner.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    /*position: relative;*/
+    /*background-attachment: fixed;*/
+}
+
+.subject-section-cont{
+ position: absolute;
+    left:50%;
+    
+}
+ct-form {
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #faf9f6;
+    background: rgba(34, 33, 33, 0.60);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.1px);
+    -webkit-backdrop-filter: blur(6.1px);
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+.subject-items ul{
+   
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    padding: 20px;
+    justify-content: center;
+  }    
+.contact-form .submit-btn {
+    background-color: #78007c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 200px;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background-color: #041f60;
 }
