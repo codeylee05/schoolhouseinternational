@@ -270,7 +270,7 @@ section {
 .landing-bottom .left .img-2 {
     width: 230px;
     height: 65px;
-    transform: translateY(-10px);
+    transform: translateY(-5px);
 }
 
 /* About section */
@@ -279,6 +279,8 @@ section {
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
+    transform: translateY(45px);
+    height: 100%;
     /*position: relative;*/
     /*background-attachment: fixed;*/
 }
@@ -288,6 +290,7 @@ section {
     color: #78007c;
     font-weight: bold;
     text-align: center;
+    transform: translateY(-63px);
 }
 
 .about-cards-cont {
@@ -298,6 +301,7 @@ section {
     align-items: center;
     padding: 20px;
     padding-top: 0;
+    transform: translateY(-55px);
 }
 
 .about-card {
@@ -308,7 +312,7 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     color: #333;
-    height: 241px;
+    height: 265px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -355,9 +359,9 @@ section {
 .campus-card {
     background: rgba(4, 31, 96, 0.04);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    /*box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(3.9px);
-    -webkit-backdrop-filter: blur(3.9px);
+    -webkit-backdrop-filter: blur(3.9px);*/
     border: 1px solid rgba(4, 31, 96, 0.13);
     padding: 10px;
     text-align: center;
@@ -643,18 +647,22 @@ section {
         gap: 5px;
     }
 
-    .landing-header-1 h1 {
+    .landing-header-1 .right {
+        display: none;
+    }
+
+    /*.landing-header-1 h1 {
         font-size: 1.9rem;
     }
 
     .landing-header-1 h2 {
         font-size: 1.2rem;
         font-weight: bold;
-    }
+    }*/
 
     .landing-header-1 img {
-        width: 150px;
-        height: 150px;
+        width: 185px;
+        height: 185px;
     }
 
     .landing-header-2 {
@@ -662,7 +670,7 @@ section {
         top: 20px;
         left: 0;
         text-align: center;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         color: #A6B6F8;
     }
 
@@ -674,22 +682,24 @@ section {
         width: 90%;
         height: auto;
         padding: 15px;
+        font-size: 1.5rem;
     }
 
     .landing-contact .contact-btn {
         width: 100%;
+        font-size: 1.5rem;
     }
 
     .landing-bottom .left .img-1,
     .landing-bottom .left .img-2 {
-        width: 55%;
+        width: 70%;
         height: auto;
     }
 
     .landing-bottom .left .img-2 {
         width: 37%;
     }
-    .landing-bottom {
+    /*.landing-bottom {
         flex-direction: column;
         align-items: center;
         height: 30%;
@@ -713,24 +723,35 @@ section {
         margin-top: 5px; 
         padding-top: 0; 
         transform: translateY(-50px);
+    }*/
+    .landing-bottom {
+        display: none;
     }
 
     #about-section {
-        transform: translateY(45px);
+        height: 107%;
+        transform: none;
     }
 
     .about-header {
-        font-size: 2.3rem;
+        font-size: 2.4rem;
+        transform: translateY(-50px);
+    }
+
+    .about-header {
+        display: flex;
+        flex-direction: column;
     }
 
     .about-cards-cont {
-        margin-top: 10px;
+        margin-top: 0px;
+        transform: translateY(-25px);
     }
 
     .about-card {
         flex: 1 1 100%; 
         padding: 15px;
-        height: 150px;
+        height: 170px;
     }
 
     .about-card h2 {
@@ -741,10 +762,15 @@ section {
         display: none; 
     }
 
+    #campuses-section {
+        height: 107%;
+    }
+
     .campus-cards-cont {
         flex-direction: column;
         align-items: center;
         gap: 20px;
+        transform: translateY(-25px); 
     }
 
     .campus-card {
@@ -760,7 +786,8 @@ section {
     }
 
     .campuses-header {
-        font-size: 2.2rem; /* Smaller header font size */
+        font-size: 2.2rem;
+        transform: translateY(-40px); 
     } 
     
     .campus-card a button {
@@ -771,7 +798,36 @@ section {
         border: solid 1px #78007c;
         color: #78007c;
     }
+    .carousel {
+        flex-direction: row;
+        animation: slide-mobile 30s infinite;
+    }
 
+    .testimonial {
+        flex: 0 0 100%; /* Full width for mobile view */
+        padding: 30px;
+    }
+
+    .testimonial p {
+        font-size: 1.2rem; /* Larger text */
+    }
+
+    .testimonial h3 {
+        font-size: 1.5rem; /* Highlight the name */
+    }
+
+    @keyframes slide-mobile {
+        0% { transform: translateX(0); }
+        20% { transform: translateX(0); }
+        25% { transform: translateX(-100%); }
+        45% { transform: translateX(-100%); }
+        50% { transform: translateX(-200%); }
+        70% { transform: translateX(-200%); }
+        75% { transform: translateX(-300%); }
+        95% { transform: translateX(-300%); }
+        100% { transform: translateX(0); }
+    }
+    
 }
 
 /*tablets and larger screens under laptop */
@@ -841,13 +897,13 @@ section {
     }
 
     .landing-header-1 img {
-        width: 160px; 
-        height: 160px;
+        width: 170px; 
+        height: 170px;
     }
 
     .landing-header-2 {
         position: relative;
-        top: 50px;
+        top: 0px;
         left: 0;
         text-align: center;
         font-size: 1.7rem;
@@ -857,7 +913,7 @@ section {
 
     .landing-contact {
         position: relative;
-        top: 80px;
+        top: 30px;
         left: 0;
         margin: 20px auto;
         width: 70%;
@@ -867,12 +923,12 @@ section {
     }
 
     .landing-contact p {
-        font-size: 1.6rem;
+        font-size: 1.7rem;
     }
 
     .landing-contact .contact-btn {
         width: 60%;
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         height: 50px;
     }
 
@@ -884,13 +940,10 @@ section {
     }
 
     .landing-bottom {
-        flex-direction: column;
-        align-items: center;
-        height: auto;
-        transform: translateY(250px);
+        display: none;
     }
 
-    .landing-bottom .right {
+    /*.landing-bottom .right {
         order: 1;
         width: 100%;
         font-size: 1.9rem; 
@@ -916,15 +969,20 @@ section {
     .landing-bottom .left .img-2 {
         width: 40%; 
         height: auto;
-    }
+    }*/
 
     #about-section {
-        transform: translateY(80px);
+       height: 110%;
+       transform: none;
     }
 
     .about-header {
         font-size: 2.9rem;
-        transform: translateY(20px);
+        transform: translateY(-40px);
+    }
+
+    .about-cards-cont {
+        transform: translateY(-30px);
     }
 
     .about-card {
@@ -941,6 +999,10 @@ section {
         font-size: 1.3rem;
     }
 
+    #campuses-section {
+        height: 107%;
+    }
+
     .campus-cards-cont {
         flex-direction: column;
         align-items: center;
@@ -948,8 +1010,8 @@ section {
     }
 
     .campus-card {
-        width: 63%; /* Full width with padding */
-        height: 340px; /* Reduced height for mobile */
+        width: 70%; /* Full width with padding */
+        height: 300px; /* Reduced height for mobile */
         padding: 10px;
         background: #A6B6F8;
         color: black;
@@ -961,7 +1023,7 @@ section {
 
     .campuses-header {
         font-size: 2.5rem;
-        margin-top: 40px;
+        transform: translateY(-40px); 
     } 
     
     .campus-card a button {
